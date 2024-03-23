@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "icp_eth_coprocessor_backend": {
+      "candid": "src/icp_eth_coprocessor_backend/icp_eth_coprocessor_backend.did",
+      "package": "icp_eth_coprocessor_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

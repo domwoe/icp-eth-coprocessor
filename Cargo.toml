@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/icp_eth_coprocessor_backend"
+]
+resolver = "2"
