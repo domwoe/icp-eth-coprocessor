@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "src/icp_eth_coprocessor_backend"
+    "src/icp_eth_coprocessor"
 ]
 resolver = "2"

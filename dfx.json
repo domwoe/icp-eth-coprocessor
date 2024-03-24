@@ -1,9 +1,20 @@
 {
   "canisters": {
-    "icp_eth_coprocessor_backend": {
-      "candid": "src/icp_eth_coprocessor_backend/icp_eth_coprocessor_backend.did",
-      "package": "icp_eth_coprocessor_backend",
+    "icp_eth_coprocessor": {
+      "candid": "src/icp_eth_coprocessor/icp_eth_coprocessor.did",
+      "package": "icp_eth_coprocessor",
       "type": "rust"
+    },
+    "evm_rpc": {
+      "type": "custom",
+      "candid": "https://github.com/internet-computer-protocol/evm-rpc-canister/releases/latest/download/evm_rpc.did",
+      "wasm": "https://github.com/internet-computer-protocol/evm-rpc-canister/releases/latest/download/evm_rpc_dev.wasm.gz",
+      "specified_id": "7hfb6-caaaa-aaaar-qadga-cai",
+      "remote": {
+        "id": {
+          "ic": "7hfb6-caaaa-aaaar-qadga-cai"
+        }
+      }
     }
   },
   "defaults": {
