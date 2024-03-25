@@ -11,7 +11,7 @@ This is an early project and should be considered as a proof of concept. It is n
 
 ## Architecture
 
-<img src="./docs/coprocessor.png" width="500">
+<img src="./docs/Coprocessor.png" width="500">
 
 ### EVM Smart contract
 
