@@ -103,10 +103,11 @@ async fn submit_result(job_id: u64, result: &str) {
     let config = CONFIG.with(|config| config.borrow().get().clone());
     let state = STATE.with(|state| state.borrow().get().clone());
 
+    
+    //TODO: Should probably be hardcoded. Recomputing the hash every time is unnecessary
     let function_signature = "callback(string)";
     let argument = result.to_string();
 
-    // Encode the function call
     let mut data = keccak256(function_signature).as_ref()[0..4].to_vec();
     data.extend(ethers_core::abi::AbiEncode::encode(argument));
 

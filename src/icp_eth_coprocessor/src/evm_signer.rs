@@ -1,4 +1,4 @@
-use candid::{CandidType, Deserialize, Nat};
+use candid::{CandidType, Deserialize};
 
 use ethers_core::abi::ethereum_types::{Address, U256, U64};
 use ethers_core::types::transaction::eip1559::Eip1559TransactionRequest;
@@ -148,8 +148,4 @@ fn y_parity(prehash: &[u8], sig: &[u8], pubkey: &[u8]) -> u64 {
         hex::encode(sig),
         hex::encode(pubkey)
     )
-}
-
-fn decode_hex(hex: &str) -> Bytes {
-    Bytes::from(hex::decode(hex.trim_start_matches("0x")).expect("failed to decode hex"))
 }

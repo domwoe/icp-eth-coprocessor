@@ -6,7 +6,7 @@ async function main() {
     const coprocessor = await hre.ethers.getContractFactory("Coprocessor");
 
     // Connect to the deployed contract
-    const contractAddress = "0xFe15805f952c6A1a465aDdD993457Ec640Ee57aA";
+    const contractAddress = "0xFe15805f952c6A1a465aDdD993457Ec640Ee57aA"; // Replace with the address of your deployed contract
     const contract = await coprocessor.attach(contractAddress);
 
 
