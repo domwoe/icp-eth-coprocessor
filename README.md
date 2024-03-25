@@ -13,7 +13,7 @@ This is an early project and should be considered as a proof of concept. It is n
 
 <img src="./docs/coprocessor.png" width="500">
 
-### EVM Smart contract: Coprocessor.sol
+### EVM Smart contract
 
 The contract `Coprocessor.sol` emits an event `NewJob` when the `newJob` function is called. The `newJob` function sends all funds to the account controlled by the `icp_eth_coprocessor` canister and emits the event.
 
