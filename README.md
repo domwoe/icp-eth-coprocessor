@@ -23,11 +23,11 @@ Furthermore, canister smart contracts have many capabilities and properties that
 
 - WASM Runtime, which is much more efficient than the EVM, and allows programming in Rust, JavaScript, and other traditional languages (next to [Motoko](https://internetcomputer.org/docs/current/motoko/main/motoko/)).
 - 404 GiB of memory,
-- Long-running computations that even allow running AI inference
+- Long-running computations that even allow [running AI inference](https://x.com/dominic_w/status/1770884845570326589).
 - HTTPS Outcalls allow canisters to interact with other chains and traditional web services.
 - Chain signatures allow canisters to sign transactions for other chains.
 - Timers allow syncing with EVM events and scheduling other tasks.
-- Unbiasable randomness provided by the threshold BLS signatures straight from the heart of ICP's Chain-key technology.
+- Unbiasable randomness provided by the threshold BLS signatures straight from the heart of [ICP's Chain-key technology](https://internetcomputer.org/how-it-works/chain-key-technology/).
 
 
 For more context on how ICP can extend Ethereum, check out [this presentation](https://docs.google.com/presentation/d/1P9wycxRsJ6DM_c8TbZG4Xun5URYZbk3WALS4UpSH0iA/edit?usp=sharing) from EthereumZuri 2024
