@@ -3,10 +3,34 @@
 
 ## Overview
 
-
 This project demonstrates how to use the Internet Computer as a coprocessor for Ethereum smart contracts. The coprocessor listens to events emitted by an Ethereum smart contract, processes them, and sends the results back.
 
-This is an early project and should be considered as a proof of concept. It is not production-ready and should not be used in production environments. There are quite some TODOs in the code which will be addressed over time. If you have any questions or suggestions, feel free to open an issue or reach out to me on the [DFINITY Developer Forum](https://forum.dfinity.org/u/domwoe/summary).
+This is an early project and should be considered as a proof of concept. It is not production-ready and should not be used in production environments. There are quite some TODOs in the code which will be addressed over time. If you have any questions or suggestions, feel free to open an issue or reach out to me on the [DFINITY Developer Forum](https://forum.dfinity.org/u/domwoe/summary) or [X](https://twitter.com/domiwoe).
+
+## What is a coprocessor?
+
+The concept of coprocessors originated in computer architecture as a technique to enhance performance. Traditional computers rely on a single central processing unit (CPU) to handle all computations. However, the CPU became overloaded as workloads grew more complex.
+
+Coprocessors were introduced to offload specific tasks from the CPU to specialized hardware. We see the same happening in the EVM ecosystem. EVM smart contracts, and Ethereum in particular, are a very constrained computing environment. Coprocessors and stateful Layer 2 solutions enable to extend the capabilities of the EVM by offloading specific tasks to more powerful environments.
+
+You can read more about coprocessors in the context of Ethereum in the article ["A Brief Into to Coprocessors"](https://crypto.mirror.xyz/BFqUfBNVZrqYau3Vz9WJ-BACw5FT3W30iUX3mPlKxtA). The first paragraph of this section was directly taken from this article.
+
+## Why use ICP as a coprocessor for Ethereum?
+
+Canister smart contracts on ICP can securely read from EVM smart contracts (using HTTPS Outcalls or the EVM RPC canister) and write to them (using Chain-key Signatures, i.e. Threshold ECDSA). Hence, there are no additional parties needed to relay messages between the two networks, and no additional work needs to be done on the EVM side to verify the results of the computation as the EVM smart contract just needs to check for the proper sender.
+
+Furthermore, canister smart contracts have many capabilities and properties that can be leveraged to extend the reach of smart contracts:
+
+- WASM Runtime, which is much more efficient than the EVM, and allows programming in Rust, JavaScript, and other traditional languages (next to [Motoko](https://internetcomputer.org/docs/current/motoko/main/motoko/)).
+- 404 GiB of memory,
+- Long-running computations that even allow running AI inference
+- HTTPS Outcalls allow canisters to interact with other chains and traditional web services.
+- Chain signatures allow canisters to sign transactions for other chains.
+- Timers allow syncing with EVM events and scheduling other tasks.
+- Unbiasable randomness provided by the threshold BLS signatures straight from the heart of ICP's Chain-key technology.
+
+
+For more context on how ICP can extend Ethereum, check out [this presentation](https://docs.google.com/presentation/d/1P9wycxRsJ6DM_c8TbZG4Xun5URYZbk3WALS4UpSH0iA/edit?usp=sharing) from EthereumZuri 2024
 
 
 ## Architecture
