@@ -82,7 +82,7 @@ thread_local! {
                 ecdsa_pub_key: None,
                 evm_address: None,
                 evm_block_height: 5552046,
-                nonce: 1,
+                nonce: 0,
             }
     ).unwrap()
 );
