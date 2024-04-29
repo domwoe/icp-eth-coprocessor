@@ -1,5 +1,6 @@
 # ICP ETH Coprocessor
 
+**UPDATE:** You can find a more refined version of this idea at https://github.com/letmejustputthishere/chainfusion-starter. 
 
 ## Overview
 
